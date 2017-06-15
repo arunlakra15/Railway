@@ -1,6 +1,11 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+kapt {
+    generateStubs = true
+}
 
 android {
     compileSdkVersion 25
@@ -46,7 +51,12 @@ dependencies {
     implementation "com.android.support:design:${android_support_lib_version}"
     implementation "com.android.support:support-v4:${android_support_lib_version}"
     implementation "com.android.support:appcompat-v7:${android_support_lib_version}"
-    annotationProcessor "com.google.dagger:dagger-compiler:${dagger_lib_version}"
-    annotationProcessor "com.google.dagger:dagger-android-processor:${dagger_lib_version}"
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation "android.arch.lifecycle:runtime:1.0.0-alpha2"
+    implementation "android.arch.lifecycle:extensions:1.0.0-alpha2"
+    implementation "android.arch.persistence.room:runtime:1.0.0-alpha2"
+    kapt "com.google.dagger:dagger-compiler:${dagger_lib_version}"
+    kapt "com.google.dagger:dagger-android-processor:${dagger_lib_version}"
+    kapt 'com.jakewharton:butterknife-compiler:8.5.1'
+    kapt "android.arch.lifecycle:compiler:1.0.0-alpha2"
+    kapt "android.arch.persistence.room:compiler:1.0.0-alpha2"
 }

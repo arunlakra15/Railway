@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kickstart.application">
+    package="com.kickstart.railway">
 
     <application
         android:allowBackup="true"

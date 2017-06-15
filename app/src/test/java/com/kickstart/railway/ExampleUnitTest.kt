@@ -1,4 +1,4 @@
-package com.kickstart.application
+package com.kickstart.railway
 
 import org.junit.Test
 
