@@ -1,9 +1,9 @@
 package com.kickstart.railway.ui
 
+import android.arch.lifecycle.LifecycleActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
 
 import javax.inject.Inject
 
@@ -11,7 +11,7 @@ import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasDispatchingSupportFragmentInjector
 
-abstract class BaseActivity : AppCompatActivity(), HasDispatchingSupportFragmentInjector {
+abstract class BaseActivity : LifecycleActivity(), HasDispatchingSupportFragmentInjector {
     @Inject
     lateinit internal var mFragmentInjector: DispatchingAndroidInjector<Fragment>
 
